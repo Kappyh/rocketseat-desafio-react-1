@@ -19,7 +19,6 @@ function App() {
 
   async function handleRemoveRepository(id) {
     api.delete(`repositories/${id}`).then(response => {
-      console.log(response);
       if (response.status === 204) {
         let repositoryList = repositories;
         const repositoryIndex = repositories.findIndex(repository => repository.id === id);
